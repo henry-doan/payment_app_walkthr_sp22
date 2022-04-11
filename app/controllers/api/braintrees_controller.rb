@@ -1,4 +1,5 @@
-class Api::BraintreeController < ApplicationController
+class Api::BraintreesController < ApplicationController
+  
   def token
     render json: ENV['BRAINTREE_DROPIN_TOKEN']
   end
@@ -22,5 +23,5 @@ class Api::BraintreeController < ApplicationController
       render json: { errors: result.errors }
     end
   end
-  
+
 end
